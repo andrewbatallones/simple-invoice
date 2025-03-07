@@ -2,12 +2,12 @@ require "test_helper"
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
   test "should get new" do
-    get users_new_url
+    get "/users/new"
     assert_response :success
   end
 
-  test "should get create" do
-    get users_create_url
-    assert_response :success
+  test "should create new user" do
+    post "/users", params: { user: { email_address: "foo@bar.com", password: "abc123" } }
+    assert_response :redirect
   end
 end
