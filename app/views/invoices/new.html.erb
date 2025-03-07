@@ -1,0 +1,27 @@
+<div>
+  <h1 class="font-bold text-4xl">Create new Invoice</h1>
+  <%= form_with model: @invoice, url: "/invoices" do |f| %>
+    <div>
+      <%= f.label :number %>
+      <%= f.text_field :number %>
+    </div>
+
+    <div>
+      <%= f.label :date %>
+      <%= f.text_field :send_date %>
+    </div>
+
+    <%# Need to wire some JS to be able to dynamically add a button %>
+    <button type="button">Add Item</button>
+
+    <%# This is the code that the JS will generate when it is clicked %>
+    <div>
+      <Label>Item Description</Label>
+      <input type="text" name="invoice[items][][description]" id="invoice_item_description_1">
+    </div>
+
+    <div>
+      <%= f.submit "Submit" %>
+    </div>
+  <% end %>
+</div>

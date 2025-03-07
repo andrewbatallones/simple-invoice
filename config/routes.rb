@@ -16,4 +16,6 @@ Rails.application.routes.draw do
   resources :passwords, param: :token
 
   resources :users, only: %i[new create]
+
+  resources :invoices, only: %i[new create index show edit update]
 end

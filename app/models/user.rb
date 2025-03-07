@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   validates_presence_of :email_address
   validates_uniqueness_of :email_address
+
+  has_many :invoices
 end
