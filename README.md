@@ -1,24 +1,26 @@
-# README
+# Simple Invoice
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Want a better way to keep track of invoices instead of a list of word docs? I gotcha! This app will keep track of invoices you want to send to various clients.
 
-Things you may want to cover:
+## Development
 
-* Ruby version
+This is a simple application that needs Postgres to run.
 
-* System dependencies
+You can run the various commands to create/migrate the tables to the database.
 
-* Configuration
+```bash
+rails db:create
+rails db:migrate
+```
 
-* Database creation
+From there, you can run the app via a web server:
 
-* Database initialization
+```bash
+rails s
+```
 
-* How to run the test suite
+If you need to run any console commands or debug anything, you can also run this command to log into the console:
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+rails c
+```
