@@ -24,3 +24,11 @@ If you need to run any console commands or debug anything, you can also run this
 ```bash
 rails c
 ```
+
+## Testing
+
+I'll be using Rails built-in test suite to run the tests. You can run the test via the rails command:
+
+```bash
+rails test
+```
