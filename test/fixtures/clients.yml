@@ -4,10 +4,12 @@ one:
   name: MyString
   company: MyString
   phone: MyString
-  email: MyString
+  email: email_one@email.com
+  slug: foo
 
 two:
   name: MyString
   company: MyString
   phone: MyString
-  email: MyString
+  email: email_two@email.com
+  slug: bar
