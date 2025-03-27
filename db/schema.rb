@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_03_27_005422) do
+ActiveRecord::Schema[8.0].define(version: 2025_03_27_010204) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -22,6 +22,11 @@ ActiveRecord::Schema[8.0].define(version: 2025_03_27_005422) do
     t.integer "zip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "addresses_clients", id: false, force: :cascade do |t|
+    t.bigint "address_id", null: false
+    t.bigint "client_id", null: false
   end
 
   create_table "clients", force: :cascade do |t|
